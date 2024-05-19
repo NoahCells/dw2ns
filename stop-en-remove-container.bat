@@ -1,15 +1,13 @@
 @echo off
 setlocal
 
-set CONTAINER_NAME=apache-httpd-container
-
-cd /d "%~dp0"
+cd /dw2ns
 
 echo Stopping Docker container...
-docker stop %CONTAINER_NAME%
+docker stop anotherball
 
 echo Removing Docker container...
-docker rm %CONTAINER_NAME%
+docker rm anotherball
 
 echo Docker container stopped and removed.
 endlocal
