@@ -1,7 +1,7 @@
-FROM httpd
+FROM nginx
 
-RUN date -u > /usr/local/apache2/htdocs/buildtime.txt
+RUN date -u > /usr/share/nginx/html/buildtime.txt
 
-COPY html/ /usr/local/apache2/htdocs/
+COPY html/ /usr/share/nginx/html
 
 EXPOSE 80
